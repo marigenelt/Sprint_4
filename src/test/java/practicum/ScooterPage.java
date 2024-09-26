@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
 import java.util.List;
 
 public class ScooterPage {
@@ -58,6 +59,10 @@ public class ScooterPage {
 
     public boolean isAnswerDisplayed(WebElement questionItem) {
         return questionItem.findElement(answerInItem).isDisplayed();
+    }
+    public String getAnswerText(WebElement questionItem) {
+        WebElement answerElement = questionItem.findElement(answerInItem);
+        return answerElement.getText();
     }
 
     //работа с заказом
